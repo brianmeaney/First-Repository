@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phone Book</title>
+
+<script>
+function validate() {
+var nameval = [];
+var phoneval = [];
+var x = 0;
+
+nameval[x] = document.figures.name.value;
+phoneval[x] = document.figures.phno.value;
+var tables = document.getElementById("hat");
+
+var row = tables.insertRow(0);
+var d1 = row.insertCell(0);
+var d2 = row.insertCell(1);
+
+if(x==0){
+d1.innerHTML = nameval[x];
+d2.innerHTML = phoneval[x];
+x++;
+}
+}
+</script>
+</head>
+<body>
+<form name="figures">
+Name: <input type="text" name="name">
+Phone Number: <input type="text" name="phno">
+<input type="button" value="Add Number" onClick="validate();"><br><br>
+</form>
+<table border="1" width="40%">
+<tr>
+<th>Name</th>
+<th>Phone Number</th>
+</tr>
+</table>
+<table width="40%" id="hat"></table>
+</body>
+</html>
